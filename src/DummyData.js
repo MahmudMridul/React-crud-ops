@@ -2,7 +2,8 @@ export const todos = [
     {
         id: 1,
         title: 'Do one thing',
-        shortDesc: 'Do that one thing for more than one hundred thousands times'
+        shortDesc: `Do that one thing for more than one hundred thousands times
+                    add more stuffs here and more and more why is this happening`
     },
     {
         id: 2,
