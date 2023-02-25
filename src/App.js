@@ -1,31 +1,49 @@
-import { Box, Card, CardContent, Typography, CardActions, Button, Grid, CardHeader } from '@mui/material'
-import React from 'react'
-import { Layout } from './Layout/Layout'
+import { 
+    Box, Card, CardContent, 
+    Typography, Grid, CardHeader 
+} from '@mui/material';
+import React from 'react';
+import { Layout } from './Layout/Layout';
 
-import { todos } from './DummyData'
+import { todos } from './DummyData';
+import { Board } from './Components/Board';
+import { Item } from './Components/Item';
 
 
 export const App = () => {
     return (
-        <Box>
-            <Layout>
-                {
-                    todos.map(item => {
-                        return(
-                            <Grid item lg={2} md={3} sm={6} xs={12}>
-                                <Card sx={{ minWidth: 200, height: 1 }} elevation={5} key={item.id}>
-                                    <CardHeader title={item.title}/>
-                                    <CardContent>
-                                        <Typography variant="body1">
-                                            {item.shortDesc}
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
-                            </Grid>
-                        )
-                    })
-                }
-            </Layout>
-        </Box>
+
+        <Layout>
+            <Grid item lg={4} md={4} sm={4} xs={12}>
+                <Board id='b1' title={'Pending'}>
+                    {
+                        todos.map(item => {
+                            return(
+                                <Item
+                                    key={item.id}
+                                    id={item.id}
+                                    title={item.title}
+                                    shortDesc={item.shortDesc}
+                                ></Item>
+                            )
+                        })
+                    }
+                </Board>
+            </Grid>
+
+            <Grid item lg={4} md={4} sm={4} xs={12}>
+                <Board id='b2' title={'In Progress'}>
+                    
+                </Board>
+            </Grid>
+
+            <Grid item lg={4} md={4} sm={4} xs={12}>
+                <Board id='b3' title={'Done'}>
+                    
+                </Board>
+            </Grid>
+
+        </Layout>
+
     )
 }

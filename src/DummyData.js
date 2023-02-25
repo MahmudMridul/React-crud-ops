@@ -25,4 +25,4 @@ export const todos = [
         title: 'Do one thing',
         shortDesc: 'Do that one thing'
     },
-]
+];
