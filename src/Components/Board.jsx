@@ -1,11 +1,8 @@
 import { Paper, Typography, Grid } from '@mui/material';
-import React, { useMemo, useState } from 'react';
+import React, {  } from 'react';
 
 export const Board = (props) => {
     const { children, id, title } = props;
-    // const [minHeight, setMinHeight] = useState(); 
-
-    const childrenCount = useMemo(() => React.Children.count(children), [children]);
 
     const drop = (e) => {
         e.preventDefault();
@@ -18,24 +15,24 @@ export const Board = (props) => {
         e.preventDefault();
     }
 
-    const minHeight = useMemo(() => `${200 + childrenCount * 20}px`, [childrenCount]);
 
     return (
         <Paper
-            sx={{ minHeight: minHeight }}
+            sx={{ minHeight: 500 }}
             elevation={3}
             id={id}
             onDrop={drop}
             onDragOver={dragOver}
+            label='Paper'
         >
             <Typography
                 variant='h4'
                 align='center'
-                sx={{ mb: 4 }}
+                sx={{ mb: 2, mt: 2 }}
             >
                 {title}
             </Typography>
-            <Grid container columns={1} rowSpacing={1}>
+            <Grid container columns={1} spacing={1}>
                 {children}
             </Grid>
         </Paper>

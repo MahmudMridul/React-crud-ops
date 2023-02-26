@@ -2,27 +2,26 @@ export const todos = [
     {
         id: 1,
         title: 'Do one thing',
-        shortDesc: `Do that one thing for more than one hundred thousands times
-                    add more stuffs here and more and more why is this happening`
+        shortDesc: `Do that one thing`
     },
     {
         id: 2,
-        title: 'Do one thing',
-        shortDesc: 'Do that one thing'
+        title: 'Do two thing',
+        shortDesc: 'Do that two thing'
     },
     {
         id: 3,
-        title: 'Do one thing',
-        shortDesc: 'Do that one thing'
+        title: 'Do three thing',
+        shortDesc: 'Do that three thing'
     },
     {
         id: 4,
-        title: 'Do one thing',
-        shortDesc: 'Do that one thing'
+        title: 'Do four thing',
+        shortDesc: 'Do that four thing'
     },
     {
         id: 5,
-        title: 'Do one thing',
-        shortDesc: 'Do that one thing'
+        title: 'Do five thing',
+        shortDesc: 'Do that five thing'
     },
 ];

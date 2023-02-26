@@ -19,7 +19,7 @@ export const Item = (props) => {
     return (
         <Grid item lg={1} md={1} sm={1} xs={1}>
             <Card 
-                sx={{ minWidth: 200, height: 1 }} 
+                sx={{ minWidth: 200, height: 1, my: 1 }} 
                 elevation={5} 
                 key={props.id}
                 id={props.id}
